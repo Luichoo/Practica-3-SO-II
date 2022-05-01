@@ -30,3 +30,12 @@ Una vez hecho eso, le cambiamos el nombre a la nueva maquina para diferenciarla 
 Ahora vamos a iniciar la maquina, nos marcará un mensaje que nos indicara si la movimos de lugar o copiamos esta maquina, le diremos que la copiamos e iniciamos y con eso tendremos ya listo el respaldo en donde trabajaremos a continuación.  
   
 ![image](https://user-images.githubusercontent.com/75387331/166168006-35e1f3dc-0ef5-4635-940b-766024d76d54.png)  
+  
+## 2. Nomenclatura del Kernel de Linux  
+Al ser de codigo abierto, este nos permite acceso a su codigo para poder interacturar directamente con el, por esto se necesita el entendimiento de la nomenclatura de este para poder manejar el kernel directamente.  
+La nomenclatura del Kernel de Linux se divide en tres campos separados por un punto: 
+- Número de versión. Versión actual del kernel. 
+- Número de sub-versión. Si el número es par es una versión estable, de lo contrario es inestable.  
+- Nivel de corrección en el que actualmente se encuentra.
+
+
