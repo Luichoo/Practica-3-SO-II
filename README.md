@@ -1,4 +1,10 @@
-# Practica-3-SO-II  
+# Practica 3 SOII  
+### Integrantes del equipo:  
+Luis Antonio Blanco Conde  
+Gustavo Contreras Mejia  
+Alejandro Octavio Salas Comparán  
+Gabriel Salom Fernandez  
+  
 ## I. Crear y levantar respaldo de nuestra maquina virtual  
 Generaremos el respaldo de esta maquina virtual.  
 Para hacer el respaldo de nuestra maquina virtual en Vmware se deben de seguir los siguientes pasos:  
