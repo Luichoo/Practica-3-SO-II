@@ -12,7 +12,7 @@ Para hacer el respaldo de nuestra máquina virtual en Vmware se deben de seguir 
 ![image](https://user-images.githubusercontent.com/75387331/166168015-0c05dfa0-4d24-4615-adb0-cf7e467dc6f9.png)  
 
 ### 1. Ubicar la carpeta en donde tenemos la máquina virtual que deseamos hacer un respaldo  
-Aqui lo tenemos en la carpeta de documentos, creamos de igual manera la carpeta a la que se desea mandar el contenido de la que ya teniamos.  
+Aquí lo tenemos en la carpeta de documentos, creamos de igual manera la carpeta a la que se desea mandar el contenido de la que ya teniamos.  
   
 ![image](https://user-images.githubusercontent.com/75387331/166167657-e05f5cf8-0cc4-4fbf-881d-b484f620b111.png)  
   
@@ -29,7 +29,7 @@ Los datos copiados los meteremos en la carpeta de "Ubuntu respaldo" y esperamos 
 Le vamos a dar en Open a Virtual Machine y vamos a nuestra carpeta que acabamos de hacer el duplicado y vamos a abrir el archivo .vmx para que nos detecte a la máquina.  
 ![image](https://user-images.githubusercontent.com/75387331/166167802-14f003e3-dd2f-4d02-9ed3-0ba532880f85.png)  
   
-Una vez hecho eso, le cambiamos el nombre a la nueva máquina para diferenciarla y ya andara detectada por vmware.  
+Una vez hecho eso, le cambiamos el nombre a la nueva máquina para diferenciarla y ya andara detectada por VMWare.  
   
 ![image](https://user-images.githubusercontent.com/75387331/166209287-539cc8f3-de57-438c-9335-f7e7cdb4e0d0.png)  
   
@@ -129,11 +129,11 @@ CONFIG_SYSTEM_REVOCATION_KEYS
   
 ![image](https://user-images.githubusercontent.com/75387331/166172343-b4c6a1df-8618-4f1c-90a6-9d7f9347384c.png)  
   
-3. Para hacer los cambios al archivo de la configuracion vamos a correr el comando **make**:  
+3. Para hacer los cambios al archivo de la configuración, vamos a correr el comando **make**:  
 ``` 
 make menuconfig
 ```
-4. Cuando corramos este comando nos abrirá una interfaz donde vamos a darle a guardar dejando todo en sus opciones por defecto y salimos.  
+4. Cuando corramos este comando nos abrirá una interfaz donde vamos a dar enter donde dice Guardar, dejando todo en sus opciones por defecto y salimos.  
   
 ![image](https://user-images.githubusercontent.com/75387331/166209160-b625b2dc-fbb6-432c-92a3-94fdf943e43a.png)  
   
@@ -143,7 +143,7 @@ make menuconfig
   ```
   make
   ```
-  Esto llega a tardarse dependiendo de la potencia de tu computadora, asegurate de tener buena cantidad de espacio disponible en tu máquina, en mi caso fueron 45GB.  
+  Esto llega a tardarse dependiendo de la potencia de tu computadora, asegurate de tener buena cantidad de espacio disponible en tu máquina(en mi caso fueron 45GB).  
     
 ![image](https://user-images.githubusercontent.com/75387331/166208273-524d3b5c-939d-4578-907d-1de4edbb04e6.png)  
   
@@ -159,7 +159,7 @@ Finalizado el proceso podemos continuar.
   
 ## IX. Instalar el kernel  
    
- Correremos la siguiente linea para finalizar con la instalaciión de este.  
+ Correremos la siguiente linea para finalizar con la instalación de este.  
    
  ```
  sudo make install
