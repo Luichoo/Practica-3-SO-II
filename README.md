@@ -31,19 +31,20 @@ Ahora vamos a iniciar la maquina, nos marcará un mensaje que nos indicara si la
   
 ![image](https://user-images.githubusercontent.com/75387331/166168006-35e1f3dc-0ef5-4635-940b-766024d76d54.png)  
   
-## 2. Nomenclatura del Kernel de Linux  
+## II. Nomenclatura del Kernel de Linux  
 Al ser de codigo abierto, este nos permite acceso a su codigo para poder interacturar directamente con el, por esto se necesita el entendimiento de la nomenclatura de este para poder manejar el kernel directamente.  
 La nomenclatura del Kernel de Linux se divide en tres campos separados por un punto: 
 - Número de versión. Versión actual del kernel. 
 - Número de sub-versión. Si el número es par es una versión estable, de lo contrario es inestable.  
 - Nivel de corrección en el que actualmente se encuentra.
 
-## 3. Paquetes Requeridos para compilacion de kernel e instalación  
+## III. Paquetes Requeridos para compilacion de kernel e instalación  
 para hacer la compilación necesitamos correr esto en terminal:  
 ``` 
 sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison
 ```
 ¿Pero qué significa cada uno de estos?  
+  
 | Paquete | descripción |
 | --- | --- |
 | git | Permite trabajar con la pagina de github para ahcer cambios o descargas a un codigo. |
@@ -62,7 +63,7 @@ Entendiendo esto ya corremos esto en terminal y podemos continuar con los siguie
 ![image](https://user-images.githubusercontent.com/75387331/166170952-44c9501c-9966-4807-ae88-cf1a4ebd4a93.png)  
 
   
-## 4. Descargar versión de kernel desde terminal  
+## IV. Descargar versión de kernel desde terminal  
   
 Para este paso vamos a ver que versión de kernel queremos en la pagina de [kernel.org](kernel.org).  
   
@@ -86,8 +87,8 @@ Vamos a Guardarlo en la carpeta de Documents y de aqui nos moveremos a los sigui
   
 ![image](https://user-images.githubusercontent.com/75387331/166171648-07c876a2-bfe4-4b49-a775-95bdc3ae7ace.png)  
 
-## 5. Extraer el codigo del kernel  
-Vamos a correr en la carpeta en donde descargamos el kernel el siguiente comando:  
+## V. Extraer el codigo del kernel  
+1. Vamos a correr en la carpeta en donde descargamos el kernel el siguiente comando:  
   
 ``` 
 tar xvf linux-5.17.5.tar.xz
@@ -95,6 +96,30 @@ tar xvf linux-5.17.5.tar.xz
 Una vez que se haya descomprimido el kernel se deberá de ver así el directorio con la carpeta de nuestro kernel.  
   
 ![image](https://user-images.githubusercontent.com/75387331/166171905-755987ff-3771-41e5-968b-0cb8778b0dfd.png)
+
+## VI. Configuración del kernel  
+
+1. Nos iremos a la carpeta de nuestro kernel usando **cd**:
+```
+cd linux-5.17.5
+```
+  
+2. Copiaremos la configuración actual a nuestro kernel usando **cp**:
+``` 
+cp -v /boot/config-$(uname -r) .config
+```
+![image](https://user-images.githubusercontent.com/75387331/166172343-b4c6a1df-8618-4f1c-90a6-9d7f9347384c.png)  
+  
+3. Para hacer los cambios al archivo de la configuracion vamos a correr el comando **make**:  
+``` 
+make menuconfig
+```
+4. Cuando corramos este comando nos abrirá una interfaz donde vamos a darle a guardar dejando todo en sus opciones por defecto y salimos.  
+  
+![image](https://user-images.githubusercontent.com/75387331/166172675-5cd478de-fbf7-4b1e-9f52-cb22028551f9.png)  
+  
+## VII. Compilar el kernel  
+
 
 
 
