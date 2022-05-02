@@ -41,7 +41,7 @@ La nomenclatura del Kernel de Linux se divide en tres campos separados por un pu
 ## 3. Paquetes Requeridos para compilacion de kernel e instalación  
 para hacer la compilación necesitamos correr esto en terminal:  
 ``` 
-sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison  
+sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison
 ```
 ¿Pero qué significa cada uno de estos?  
 | Paquete | descripción |
@@ -51,11 +51,16 @@ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-de
 | build-essential | Instala todas las herramientas necesarias de C/C++, gcc y g++. |
 | ncurses-dev | Libreria que nos da una API para nuerstra terminal. |
 | xz-utils | Mayor velocidad de comprimir y descomprimir archivos. |
-| libssl-dev | encripta la información para hacer una conexión segura a internet. |
+| libssl-dev | Encripta la información para hacer una conexión segura a internet. |
 | bc | Calculadora desde terminal. |
-| flex | genera analizadores lexicos que convierten caracteres a tokens. |
+| flex | Genera analizadores lexicos que convierten caracteres a tokens. |
 | libelf-dev | Maneja archivos ELF. |
-| bison | GNU parser que convierte una descripción gramática a un programa en C. |
+| bison | GNU parser que convierte una descripción gramática a un programa en C. |  
+  
+Entendiendo esto ya corremos esto en terminal y podemos continuar con los siguientes pasos.  
+
+![image](https://user-images.githubusercontent.com/75387331/166170952-44c9501c-9966-4807-ae88-cf1a4ebd4a93.png)  
+
   
 ## 4. Descargar versión de kernel desde terminal  
   
@@ -65,7 +70,7 @@ Para este paso vamos a ver que versión de kernel queremos en la pagina de [kern
 Aqui vemos que la ultima versión de kernel es la 5.17.5, vemos de igual manera la versión de nuestro kernel de nuestra maquina con el siguiente comando:  
   
 ```
-uname -r  
+uname -r
 ```
   
 ![image](https://user-images.githubusercontent.com/75387331/166169505-4bb6ac5f-b2b7-4bb3-94cf-afce52996426.png)
@@ -74,7 +79,22 @@ Vemos que tenemos la versión 5.13.0 por lo que vamos a subirla a la siguiente v
 En nuestro caso que vamos a subir a la 5.17.5, pondremos esto en la linea de código para descargar nuestra versión en terminal, si deseas descargar otra versión, cambia el 5.17.5 por tu versión deseada. 
   
 ```
-wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.17.5.tar.xz  
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.17.5.tar.xz
 ```
+  
+Vamos a Guardarlo en la carpeta de Documents y de aqui nos moveremos a los siguientes pasos.  
+  
+![image](https://user-images.githubusercontent.com/75387331/166171648-07c876a2-bfe4-4b49-a775-95bdc3ae7ace.png)  
+
+## 5. Extraer el codigo del kernel  
+Vamos a correr en la carpeta en donde descargamos el kernel el siguiente comando:  
+  
+``` 
+tar xvf linux-5.17.5.tar.xz
+```
+Una vez que se haya descomprimido el kernel se deberá de ver así el directorio con la carpeta de nuestro kernel.  
+  
+![image](https://user-images.githubusercontent.com/75387331/166171905-755987ff-3771-41e5-968b-0cb8778b0dfd.png)
+
 
 
