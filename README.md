@@ -41,7 +41,7 @@ La nomenclatura del Kernel de Linux se divide en tres campos separados por un pu
 ## III. Paquetes Requeridos para compilacion de kernel e instalación  
 para hacer la compilación necesitamos correr esto en terminal:  
 ``` 
-sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison
+sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison zstd
 ```
 ¿Pero qué significa cada uno de estos?  
   
@@ -136,9 +136,38 @@ make menuconfig
   ```
   make
   ```
-  Esto llega a tardarse dependiendo de la potencia de tu computadora.  
+  Esto llega a tardarse dependiendo de la potencia de tu computadora, asegurate de tener buena cantidad de espacio disponible en tu maquina, en mi caso fueron 45GB.  
+    
   ![image](https://user-images.githubusercontent.com/75387331/166173030-54b5846e-aa1d-45c8-9131-6bfbffeb9431.png)  
   
- 
-
-
+ ## VIII. Instalar modulos del kernel  
+   
+ Una vez que termine la instalación del kernel vamos a correr esto en consola: 
+ ```
+ sudo make modules_install
+ ```
+Finalizado el proceso podemos continuar.  
+  
+![image](https://user-images.githubusercontent.com/75387331/166199616-727dd329-1fe1-4233-9c24-90b1c5626d54.png)  
+  
+## IX. Instalar el kernel  
+   
+ Correremos la siguiente linea para finalizar con la instalaciión de este.  
+   
+ ```
+ sudo make install
+ ```
+   
+![image](https://user-images.githubusercontent.com/75387331/166200144-acacbccd-9961-4d03-8be3-d4f92810fe8d.png)  
+  
+Después vamos a actualizar los inittramfs a nuestra versión instalada: 
+```
+sudo update-initramfs -c -k 5.9.6
+```
+  
+Y posteriormente actualizaremos el GRUB: 
+  
+```
+sudo update-grub
+```
+  
