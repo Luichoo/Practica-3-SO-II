@@ -57,6 +57,7 @@ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-de
 | flex | Genera analizadores lexicos que convierten caracteres a tokens. |
 | libelf-dev | Maneja archivos ELF. |
 | bison | GNU parser que convierte una descripción gramática a un programa en C. |  
+| zstd | Descomprimir con el Zestandar. |
   
 Entendiendo esto ya corremos esto en terminal y podemos continuar con los siguientes pasos.  
 
