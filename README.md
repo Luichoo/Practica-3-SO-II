@@ -38,4 +38,43 @@ La nomenclatura del Kernel de Linux se divide en tres campos separados por un pu
 - Número de sub-versión. Si el número es par es una versión estable, de lo contrario es inestable.  
 - Nivel de corrección en el que actualmente se encuentra.
 
+## 3. Paquetes Requeridos para compilacion de kernel e instalación  
+para hacer la compilación necesitamos correr esto en terminal:  
+``` 
+sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison  
+```
+¿Pero qué significa cada uno de estos?  
+| Paquete | descripción |
+| --- | --- |
+| git | Permite trabajar con la pagina de github para ahcer cambios o descargas a un codigo. |
+| fakeroot | Genera la herramienta necesaria para crear un entorno de superusuario. |
+| build-essential | Instala todas las herramientas necesarias de C/C++, gcc y g++. |
+| ncurses-dev | Libreria que nos da una API para nuerstra terminal. |
+| xz-utils | Mayor velocidad de comprimir y descomprimir archivos. |
+| libssl-dev | encripta la información para hacer una conexión segura a internet. |
+| bc | Calculadora desde terminal. |
+| flex | genera analizadores lexicos que convierten caracteres a tokens. |
+| libelf-dev | Maneja archivos ELF. |
+| bison | GNU parser que convierte una descripción gramática a un programa en C. |
+  
+## 4. Descargar versión de kernel desde terminal  
+  
+Para este paso vamos a ver que versión de kernel queremos en la pagina de [kernel.org](kernel.org).  
+  
+ ![image](https://user-images.githubusercontent.com/75387331/166169318-becb3e5d-62dd-4821-bda0-56bdcd226c28.png)
+Aqui vemos que la ultima versión de kernel es la 5.17.5, vemos de igual manera la versión de nuestro kernel de nuestra maquina con el siguiente comando:  
+  
+```
+uname -r  
+```
+  
+![image](https://user-images.githubusercontent.com/75387331/166169505-4bb6ac5f-b2b7-4bb3-94cf-afce52996426.png)
+  
+Vemos que tenemos la versión 5.13.0 por lo que vamos a subirla a la siguiente versión.  
+En nuestro caso que vamos a subir a la 5.17.5, pondremos esto en la linea de código para descargar nuestra versión en terminal, si deseas descargar otra versión, cambia el 5.17.5 por tu versión deseada. 
+  
+```
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.17.5.tar.xz  
+```
+
 
