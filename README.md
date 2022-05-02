@@ -105,9 +105,20 @@ cd linux-5.17.5
 ```
   
 2. Copiaremos la configuración actual a nuestro kernel usando **cp**:
+
 ``` 
 cp -v /boot/config-$(uname -r) .config
 ```
+  
+ ### **Nota**:  
+Puede que lleguen a encontrarse con el error de en pasos posteriores:   
+**"make[1]: *** No rule to make target 'debian/canonical-certs.pem', needed by 'certs/x509_certificate_list'.  Stop. make: *** [Makefile:1831: certs] Error 2"**.  
+  
+Para resolver eso es necesario ir a nuestro archivo de donde copiamos la configuracion en /boot/config-$(uname -r) y buscar estas lineas y comentarlas todo como superusuario:     
+CONFIG_SYSTEM_TRUSTED_KEYS  
+CONFIG_MODULE_SIG_KEY  
+CONFIG_SYSTEM_REVOCATION_KEYS 
+  
 ![image](https://user-images.githubusercontent.com/75387331/166172343-b4c6a1df-8618-4f1c-90a6-9d7f9347384c.png)  
   
 3. Para hacer los cambios al archivo de la configuracion vamos a correr el comando **make**:  
@@ -125,5 +136,8 @@ make menuconfig
   make
   ```
   Esto llega a tardarse dependiendo de la potencia de tu computadora.  
+  ![image](https://user-images.githubusercontent.com/75387331/166173030-54b5846e-aa1d-45c8-9131-6bfbffeb9431.png)  
+  
+ 
 
 
