@@ -119,7 +119,11 @@ make menuconfig
 ![image](https://user-images.githubusercontent.com/75387331/166172675-5cd478de-fbf7-4b1e-9f52-cb22028551f9.png)  
   
 ## VII. Compilar el kernel  
-
-
+  
+  Para la compílación del kernel vamos a correr el **make**:
+  ```
+  make
+  ```
+  Esto llega a tardarse dependiendo de la potencia de tu computadora.  
 
 
